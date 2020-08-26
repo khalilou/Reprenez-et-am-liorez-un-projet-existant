@@ -59,7 +59,11 @@ describe('controller', function () {
 	});
 
 	it('should show entries on start-up', function () {
-		// TODO: write test
+		setUpModel([]);
+
+		subject.setView('');
+
+		expect(view.render).toHaveBeenCalledWith('showEntries', []);
 	});
 
 	describe('routing', function () {
@@ -83,7 +87,6 @@ describe('controller', function () {
 		});
 
 		it('should show active entries', function () {
-			
 
 			var todo_1 = {title: 'active to do', completed: false, id:1};
 			var todo_2 = {title: 'active to do', completed: true, id:2};
