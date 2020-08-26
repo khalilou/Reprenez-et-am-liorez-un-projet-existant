@@ -83,7 +83,15 @@ describe('controller', function () {
 		});
 
 		it('should show active entries', function () {
-			// TODO: write test
+			
+
+			var todo_1 = {title: 'active to do', completed: false, id:1};
+			var todo_2 = {title: 'active to do', completed: true, id:2};
+			setUpModel([todo_1,todo_2]);
+
+			subject.setView('#/active');
+
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo_1, todo_2]);
 		});
 
 		it('should show completed entries', function () {

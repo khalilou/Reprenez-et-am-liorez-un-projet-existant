@@ -81,14 +81,14 @@
 		callback = callback || function () {};
 
 		// Generate an ID
-	    var newId = 0; 
+	    // var newId = 0; 
 	    // var charset = "0123456789";
 
         // for (var i = 0; i < 6; i++) {
      	// 	newId += charset.charAt(Math.floor(Math.random() * charset.length));
 		// }
-		newId += Math.round(Math.random() * 1000000);
-		console.log("test " + newId)
+		// newId += Math.round(Math.random() * 1000000);
+		console.log(Date.now())
 
 		// If an ID was actually given, find the item and update each property
 		if (id) {
@@ -106,7 +106,7 @@
 		} else {
 
     		// Assign an ID
-			updateData.id = newId;
+			updateData.id = Date.now();
     
 
 			todos.push(updateData);
