@@ -98,7 +98,10 @@ describe('controller', function () {
 		});
 
 		it('should show completed entries', function () {
-			// TODO: write test
+			var todo_1 = {title: 'active to do', completed: true};
+			setUpModel([todo_1]);
+			subject.setView('#/completed');
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo_1]);
 		});
 	});
 
