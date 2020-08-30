@@ -88,8 +88,6 @@
      	// 	newId += charset.charAt(Math.floor(Math.random() * charset.length));
 		// }
 		// newId += Math.round(Math.random() * 1000000);
-		console.log(Date.now())
-
 		// If an ID was actually given, find the item and update each property
 		if (id) {
 			for (var i = 0; i < todos.length; i++) {
