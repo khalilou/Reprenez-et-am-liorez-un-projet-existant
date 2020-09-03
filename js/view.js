@@ -184,6 +184,7 @@
 
 		} else if (event === 'toggleAll') {
 			$on(self.$toggleAll, 'click', function () {
+				console.log("test")
 				handler({completed: this.checked});
 			});
 
