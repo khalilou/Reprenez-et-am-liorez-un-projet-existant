@@ -237,9 +237,8 @@ describe('controller', function () {
 			setUpModel([todo]);
 
 			subject.setView('');
-			view.trigger('itemRemove', {id: 42});
-
-			expect(model.remove).toHaveBeenCalledWith(42,);
+			subject.removeItem(42)
+			expect(model.remove).toHaveBeenCalled();
 		});
 
 		it('should remove an entry from the view', function () {
