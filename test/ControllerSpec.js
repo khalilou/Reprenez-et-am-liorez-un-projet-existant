@@ -165,7 +165,15 @@ describe('controller', function () {
 
 	describe('toggle all', function () {
 		it('should toggle all todos to completed', function () {
-			// TODO: write test
+			var todo = {id: 42, title: 'an active todo', completed: false};					
+
+			setUpModel([todo]);																		
+			subject.setView('');																	 
+
+			view.trigger('toggleAll', {completed: true});											 
+			
+			expect(model.read).toHaveBeenCalledWith({completed: false}, jasmine.any(Function));		 
+			expect(model.update).toHaveBeenCalledWith(42, {completed: true}, jasmine.any(Function));
 		});
 
 		it('should update the view', function () {
@@ -239,7 +247,7 @@ describe('controller', function () {
 			subject.setView('');
 			subject.removeItem(42)
 			expect(model.remove).toHaveBeenCalled();
-		});
+		});	
 
 		it('should remove an entry from the view', function () {
 			var todo = {id: 42, title: 'my todo', completed: true};
