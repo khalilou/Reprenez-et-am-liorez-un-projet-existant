@@ -177,7 +177,16 @@ describe('controller', function () {
 		});
 
 		it('should update the view', function () {
-			// TODO: write test
+			var todos = [
+				{title: 'todo 1', completed: true, id: 1},
+				{title: 'todo 2', completed: false, id: 2}
+			];
+
+			setUpModel(todos);
+			subject.setView('');
+			view.trigger('toggleAll', {completed: false});
+
+			expect(view.render).toHaveBeenCalledWith('elementComplete', {id: 1, completed: false});
 		});
 	});
 
