@@ -5,6 +5,28 @@
     "todomvc-app-css": "^2.0.1"
   },
   "devDependencies": {
-    "jasmine-core": "^2.0.0"
-  }
+    "jasmine-core": "^2.0.0",
+    "jsdoc": "^3.6.6"
+  },
+  "name": "todo-list-app",
+  "description": "Projet-8 du parcous front-end d'Openclassroom :\r 1 étape : \r Le projet consiste en la détection et la correction des bugs et la refactorisation de certaines parties du code source présents de l'application qui a été créé par d'autres développeurs\r 2 étape :\r Tests unitaires avec le framework Jasmine\r Pour voir plus en détails les tests aller dans le fichier ControllerSpec.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khalilou/Reprenez-et-am-liorez-un-projet-existant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khalilou/Reprenez-et-am-liorez-un-projet-existant/issues"
+  },
+  "homepage": "https://github.com/khalilou/Reprenez-et-am-liorez-un-projet-existant#readme"
 }
